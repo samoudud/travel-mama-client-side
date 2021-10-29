@@ -13,7 +13,6 @@ const Services = () => {
             .catch(error => console.log(error.message))
             .finally(() => setIsLoading(false))
     }, []);
-
     if (isLoading) {
         return <Spinner></Spinner>
     }

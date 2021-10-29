@@ -22,15 +22,19 @@ const NavBar = () => {
                             <img className="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow" />
                         </div>
                         <div className="hidden sm:block sm:ml-6">
-                            {
-                                user?.email && <div>
-                                    <div className="flex space-x-4">
+
+
+                            <div className="flex items-center space-x-4">
+                                <Link to="/home" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</Link>
+                                {
+                                    user?.email && <div>
                                         <Link to="/mybooking" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">My Booking</Link>
                                         <Link to="/managebooking" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Manage Booking</Link>
                                         <Link to="/addservice" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Add Service</Link>
                                     </div>
-                                </div>
-                            }
+                                }
+                            </div>
+
                         </div>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -44,6 +48,7 @@ const NavBar = () => {
 
             <div className="sm:hidden" id="mobile-menu">
                 <div className="px-2 pt-2 pb-3 space-y-1">
+                    <Link to="/home" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Home</Link>
                     {
                         user.email && <div>
                             <Link to="/mybooking" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">My Booking</Link>

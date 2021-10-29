@@ -12,7 +12,7 @@ const Service = ({ place }) => {
                 <h4 className='text-2xl'>{name}</h4>
                 <div className='flex align-center justify-between'>
                     <div>
-                        <p>From {price}</p>
+                        <p>From ${price}</p>
                         <p>{days} days, {parseInt(days) + 1} night</p>
                     </div>
                     <div>
