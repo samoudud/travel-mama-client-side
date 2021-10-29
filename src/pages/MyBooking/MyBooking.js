@@ -10,13 +10,28 @@ const MyBooking = () => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const url = `http://localhost:5000/myorder/${user?.email}`;
+        const url = `https://travel-mama-server.herokuapp.com/mybookings/${user?.email}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setBookings(data))
             .catch(error => console.log(error.message))
             .finally(() => setIsLoading(false));
-    }, [])
+    }, []);
+
+    const handleRemove = id => {
+        const url = `https://travel-mama-server.herokuapp.com/mybooking/${id}`;
+        fetch(url, {
+            method: "DELETE"
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.deletedCount) {
+                    alert("Delete");
+                    const remaining = bookings.filter(booking => booking._id !== id);
+                    setBookings(remaining);
+                }
+            })
+    }
 
     if (isLoading) {
         return <Spinner></Spinner>
@@ -28,7 +43,7 @@ const MyBooking = () => {
                 <h2 className='text-4xl'>Your Bookings</h2>
                 <div className='md:w-1/2 md:mx-auto md:flex flex-wrap'>
                     {
-                        bookings.map(booking => <BookedItem key={bookings._id} booking={booking} ></BookedItem>)
+                        bookings.map(booking => <BookedItem key={bookings._id} booking={booking} handleRemove={handleRemove} ></BookedItem>)
                     }
                 </div>
             </div>
