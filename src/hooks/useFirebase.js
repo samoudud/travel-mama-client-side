@@ -11,11 +11,8 @@ const useFirebase = () => {
 
     const signInWithGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
-        signInWithPopup(auth, googleProvider)
-            .then((result) => {
-                setUser(result.user);
-            })
-            .finally(() => setIsLoading(false));
+        return signInWithPopup(auth, googleProvider)
+
     };
 
     const logOut = () => {
@@ -44,6 +41,7 @@ const useFirebase = () => {
     return {
         user,
         isLoading,
+        setIsLoading,
         signInWithGoogle,
         logOut
     };

@@ -12,8 +12,9 @@ Click here for the private repo: [Server site code](https://github.com/programmi
 
 
 ## [Key features of this website]
-    * Travel Around the world
-    * Book a trip
-    * Add trip
-    * Remove Trip
-    * Manage Trip
+In This site you can run :
+    - Travel Around the world
+    - Book a trip
+    - Add trip
+    - Remove Trip
+    - Manage Trip
