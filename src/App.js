@@ -10,10 +10,11 @@ import MyBooking from './pages/MyBooking/MyBooking';
 import ManageBooking from './pages/ManageBooking/ManageBooking';
 import AddService from './pages/AddService/AddService';
 import AddBooking from './pages/AddBooking/AddBooking';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <AuthProvider>
         <Router>
           <NavBar></NavBar>
@@ -36,9 +37,12 @@ function App() {
             <PrivateRoute path='/addservice'>
               <AddService></AddService>
             </PrivateRoute>
-            <PrivateRoute path='/addbooking'>
+            <PrivateRoute path='/addbooking/:serviceId'>
               <AddBooking></AddBooking>
             </PrivateRoute>
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
           </Switch>
           <Footer></Footer>
         </Router>

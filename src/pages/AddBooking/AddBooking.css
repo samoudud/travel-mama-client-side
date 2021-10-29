@@ -1,0 +1,6 @@
+.booking {
+    background: linear-gradient(rgba(197, 184, 184, 0.26) , rgba(211, 211, 198, 0.5)), url(../../images/holiday.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
