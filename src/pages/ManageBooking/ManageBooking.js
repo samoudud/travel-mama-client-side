@@ -40,7 +40,7 @@ const ManageBooking = () => {
         return <Spinner></Spinner>
     }
     return (
-        <div className={`common-bg App pb-5 ${bookings.length === 0 && 'md:h-screen'}`}>
+        <div className={`common-bg App pb-5 ${bookings.length < 10 && 'md:h-screen'}`}>
             <div className=' md:w-4/5 mx-auto  p-4'>
                 {
                     bookings.length === 0 ? <h2 className='text-4xl font-bold text-white py-8'>There is no booking yet</h2> : <h2 className='text-4xl font-bold text-white py-8'>Manage All Booking</h2>

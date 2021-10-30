@@ -41,7 +41,7 @@ const MyBooking = () => {
     }
 
     return (
-        <div className={`common-bg ${bookings.length === 0 && 'md:h-screen'}`}>
+        <div className={`common-bg ${bookings.length < 10 && 'md:h-screen'}`}>
             <div className='App p-10'>
                 {
                     bookings.length === 0 ? <h2 className='text-4xl font-bold text-white'>Your Dont't have any booking</h2> : <h2 className='text-4xl font-bold text-white'>Your Bookings</h2>
