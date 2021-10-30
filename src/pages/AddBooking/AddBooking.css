@@ -4,7 +4,8 @@
     background-size: cover;
 }
 
-.booking form input{
+.booking form input,textarea{
+    width: 75%;
     margin-bottom: 5px;
     text-align: center;
 }

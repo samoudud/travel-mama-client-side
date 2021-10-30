@@ -17,10 +17,10 @@ const Services = () => {
         return <Spinner></Spinner>
     }
     return (
-        <div className='md:container md:mx-auto  mt-12'>
-            <h2 className='text-4xl font-medium  App sm:w-full md:w-1/2  mx-auto'>Travel Most Popular Place <br />
+        <div className='  mt-12'>
+            <h2 className='text-4xl font-medium  App sm:w-full md:w-1/2  mx-auto'>Tour We Provide <br />
                 <span className='text-tomato'>In The World</span></h2>
-            <div className='mt-10 grid grid-cols-1 md:grid-cols-3 gap-12 md:mx-24'>
+            <div className='md:w-4/6 md:mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 gap-12 '>
                 {
                     places.map(place => <Service key={place._id} place={place}></Service>)
                 }

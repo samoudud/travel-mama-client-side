@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import useAuth from '../../hooks/useAuth';
+import Booking from '../Booking/Booking';
 import Spinner from '../Shared/Spinner/Spinner';
 
 const ManageBooking = () => {
-    const { user } = useAuth();
     const [bookings, setBookings] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -13,7 +12,6 @@ const ManageBooking = () => {
             .then(res => res.json())
             .then(data => {
                 setBookings(data);
-                console.log(data)
             })
             .catch(error => console.log(error.message))
             .finally(() => setIsLoading(false));
@@ -42,8 +40,15 @@ const ManageBooking = () => {
         return <Spinner></Spinner>
     }
     return (
-        <div className='common-bg md:h-screen'>
-            <h2 className='text-2xl'>Manage All Booking</h2>
+        <div className={`common-bg App pb-5 ${bookings.length === 0 && 'md:h-screen'}`}>
+            <div className=' md:w-4/5 mx-auto  p-4'>
+                {
+                    bookings.length === 0 ? <h2 className='text-4xl font-bold text-white py-8'>There is no booking yet</h2> : <h2 className='text-4xl font-bold text-white py-8'>Manage All Booking</h2>
+                }
+                {
+                    bookings.map(booking => <Booking key={booking._id} booking={booking} handleRemove={handleRemove}></Booking>)
+                }
+            </div>
         </div>
     );
 };

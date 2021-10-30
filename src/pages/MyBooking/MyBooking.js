@@ -41,10 +41,12 @@ const MyBooking = () => {
     }
 
     return (
-        <div className=' common-bg md:h-screen'>
+        <div className={`common-bg ${bookings.length === 0 && 'md:h-screen'}`}>
             <div className='App p-10'>
-                <h2 className='text-4xl font-bold text-tomato'>Your Bookings</h2>
-                <div className='md:w-1/2 md:mx-auto md:flex flex-wrap'>
+                {
+                    bookings.length === 0 ? <h2 className='text-4xl font-bold text-white'>Your Dont't have any booking</h2> : <h2 className='text-4xl font-bold text-white'>Your Bookings</h2>
+                }
+                <div className='md:w-1/2 md:mx-auto grid grid-cols-1 md:grid-cols-3'>
                     {
                         bookings.map(booking => <BookedItem key={bookings._id} booking={booking} handleRemove={handleRemove} ></BookedItem>)
                     }

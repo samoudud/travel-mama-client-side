@@ -13,10 +13,12 @@ const AddBooking = (props) => {
     const [isLoading, setIsLoading] = useState(true)
     const [place, setPlace] = useState();
     const { register, handleSubmit } = useForm();
+
     const onSubmit = data => {
         data.status = 'pending';
         data.price = place.price;
         data.days = place.days;
+        data.img = place.img
         axios.post('https://travel-mama-server.herokuapp.com/addbooking', data)
             .then(res => {
                 if (res.data.insertedId) {
@@ -24,8 +26,6 @@ const AddBooking = (props) => {
                     history.push('/mybooking');
                 }
             })
-
-
     };
 
     const { serviceId } = useParams();
@@ -63,7 +63,7 @@ const AddBooking = (props) => {
                         <input className='rounded p-1' {...register("userName")} defaultValue={user.displayName} /> <br />
                         <input className='rounded p-1' {...register("email")} defaultValue={user.email} /> <br />
                         <input className='rounded p-1' {...register("placeName")} defaultValue={place.name} /> <br />
-                        <input className='rounded p-1' {...register("img")} defaultValue={place.img} /> <br />
+                        <input type='date' className='rounded p-1' {...register("date")} /> <br />
                         <input className='rounded p-1' {...register("address")} placeholder="Address" /> <br />
                         <input className='rounded p-1' {...register("mobile")} placeholder="mobile number" /> <br />
 
