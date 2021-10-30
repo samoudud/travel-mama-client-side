@@ -44,11 +44,22 @@ const AddBooking = (props) => {
     }
 
     return (
-        <div className='booking h-screen App py-10'>
-            <div>
-                <div className='md:shadow-2xl md:w-2/5  md:mx-auto max-w-md w-full py-20'>
-                    <h2 className='text-3xl text-gray-800 pb-8  font-bold'>Add Booking Details</h2>
-                    <form className=' border-black p-2' onSubmit={handleSubmit(onSubmit)}>
+        <div className='booking md:h-screen App py-10'>
+            <div className='container mx-auto grid grid-cols-1 md:grid-cols-2'>
+                <div className='m-2 md:w-3/4 px-2 py-12 shadow-2xl common-border'>
+                    <div className=''>
+                        <img className='w-1/2 mx-auto' src={place.img} alt="" />
+                    </div>
+                    <div className='App m-2'>
+                        <h3 className='text-3xl text-tomato'>{place.name}</h3>
+                        <h4 className='text-2xl'>Package: {place.days} days, {parseInt(place.days) + 1} night</h4>
+                        <h4 className='text-xl'>Package Includes: Ticket, Food, Hotel</h4>
+                        <p className='m-2'>{place.details}</p>
+                    </div>
+                </div>
+                <div className=' md:w-3/4 px-2 py-12 shadow-2xl common-border'>
+                    <h2 className='text-3xl text-tomato pb-8  font-bold'>Add Booking Details</h2>
+                    <form className=' border-black p-2 ' onSubmit={handleSubmit(onSubmit)}>
                         <input className='rounded p-1' {...register("userName")} defaultValue={user.displayName} /> <br />
                         <input className='rounded p-1' {...register("email")} defaultValue={user.email} /> <br />
                         <input className='rounded p-1' {...register("placeName")} defaultValue={place.name} /> <br />

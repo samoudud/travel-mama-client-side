@@ -10,7 +10,7 @@ const BookedItem = (props) => {
             <img src={img} width={'100px'} className='mx-auto' alt="" />
             <p>{placeName}</p>
             <p>Status: {status}</p>
-            <button onClick={() => handleRemove(_id)} className='bg-red-500 rounded text-white mt-2 p-2'>Remove</button>
+            <button onClick={() => handleRemove(_id)} className='bg-red-500 rounded text-white mt-2 p-2'>Cancel</button>
         </div>
     );
 };

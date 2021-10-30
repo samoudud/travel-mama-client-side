@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 const Service = ({ place }) => {
     const { name, price, days, img, _id } = place;
 
-
     return (
         <div className='shadow-lg'>
             <img src={img} alt="" />
