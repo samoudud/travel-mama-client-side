@@ -11,7 +11,7 @@ Click here for the private repo: [Client Side code](https://github.com/programmi
 Click here for the private repo: [Server site code](https://github.com/programming-hero-web-course1/tourism-or-delivery-website-server-side-samoudud)
 
 ## [Server Side Live link]
-click here for the server side: [live link]((https://travel-mama-server.herokuapp.com/)) 
+click here for the server side: [live link](https://travel-mama-server.herokuapp.com/) 
 
 
 ## [Key features of this website]
