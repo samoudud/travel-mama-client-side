@@ -16,8 +16,8 @@ click here for the server side: [live link](https://travel-mama-server.herokuapp
 
 ## [Key features of this website]
 In This site you can run :
-    - Travel Around the world
-    - Book a trip
-    - Add trip
-    - Remove Trip
-    - Manage Trip
+- Travel Around the world
+- Book a trip
+- Add trip
+- Remove Trip
+- Manage Trip
