@@ -40,7 +40,7 @@ const NavBar = () => {
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                         {
                             user?.email ? <div className='flex align-center'>
-                                <p className='p-2 text-white border-2 mx-2 rounded-lg'>{user.displayName}</p>
+                                <p className='p-2 text-white border-2 mx-2 rounded-full'>{user.displayName}</p>
                                 <button onClick={logOut} className='text-white bg-tomato p-2  rounded '>Log Out </button>
                             </div> : <Link to='/login'><button className='text-white bg-tomato p-2  rounded '>Login </button></Link>
                         }
