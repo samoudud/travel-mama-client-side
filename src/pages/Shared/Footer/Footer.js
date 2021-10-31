@@ -1,65 +1,48 @@
 import React from 'react';
+import logo from '../../../images/logo.png';
 
 const Footer = () => {
     return (
-        <footer id="footer" class="bg-gray-500">
-            <div class="container mx-auto pt-8 pb-4">
-
-                <div class="flex flex-wrap overflow-hidden sm:-mx-1 md:-mx-px lg:-mx-2 xl:-mx-2">
-
-                    <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
-                        <img style={{ maxWidth: '70%' }} className="h-auto" src="https://pngimage.net/wp-content/uploads/2019/05/fake-logo-png-.png" alt="Logo" />
+        <footer id="footer" class="bg-gray-900 text-white">
+            <div class="flex flex-wrap justify-center p-6 md:w-3/4 mx-auto">
+                <div class="flex flex-wrap mb-4 w-full">
+                    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 py-4 pl-8">
+                        <img className='md:w-3/4 ' src={logo} alt="" />
+                        <p className=' mx-auto pt-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et fugit sapiente cupiditate incidunt reprehenderit</p>
                     </div>
-
-                    <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
-
-
-                        <h4 class="text-white">Important</h4>
-                        <ul class="nav navbar-nav">
-                            <li class="leading-7 text-sm">
-                                <a class="text-white underline text-small" href="/page-1">
-                                    Page 1 </a>
-                            </li>
-                            <li class="leading-7 text-sm"><a class="text-white underline text-small" href="/page-2">Page 2</a></li>
-                        </ul>
-
-
-                    </div>
-
-                    <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
-                        <h4 class="text-white">Info</h4>
-                        <ul class="">
-                            <li class="leading-7 text-sm">
-                                <a class="text-white underline text-small" href="/page-1">
-                                    Page 1 </a>
-                            </li>
-                            <li class="leading-7 text-sm"><a class="text-white underline text-small" href="/page-2">Page 2</a></li>
+                    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 pl-8">
+                        <h3 class="text-3xl text-tomato py-4">Quick Links</h3>
+                        <ul>
+                            <li>Home</li>
+                            <li>Term</li>
+                            <li>Privacy & Policy</li>
+                            <li>Blog</li>
+                            <li>Contact Us</li>
                         </ul>
                     </div>
-
-                    <div class="w-full overflow-hidden sm:my-1 sm:px-1 sm:w-1/2 md:my-px md:px-px md:w-1/2 lg:my-2 lg:px-2 lg:w-1/4 xl:my-2 xl:px-2 xl:w-1/4 pb-6">
-
-                        <h4 class="text-white">Products</h4>
-                        <ul class="">
-                            <li class="leading-7 text-sm">
-                                <a class="text-white underline text-small" href="/page-1">
-                                    Page 1 </a>
-                            </li>
-                            <li class="leading-7 text-sm"><a class="text-white underline text-small" href="/page-2">Page 2</a></li>
+                    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 ">
+                        <h3 class="text-3xl text-tomato py-4">About Us</h3>
+                        <ul>
+                            <li>Our Story</li>
+                            <li>Travel Blog & Tips</li>
+                            <li>Working With Us</li>
+                            <li>Tour Guid</li>
+                            <li>Be Our Partner</li>
                         </ul>
                     </div>
-
+                    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 ">
+                        <h3 class="text-3xl text-tomato py-4">Support</h3>
+                        <ul>
+                            <li>Customer Support</li>
+                            <li>Privacy & Policy</li>
+                            <li>Terms & Condition</li>
+                            <li>Forum</li>
+                            <li>Tour Guid</li>
+                        </ul>
+                    </div>
                 </div>
-
-                <div class="pt-4 md:flex md:items-center md:justify-center " style={{ borderTop: '1px solid white' }} >
-                    <ul class="">
-                        <li class="md:mx-2 md:inline leading-7 text-sm" id="footer-navi-2"><a class="text-white underline text-small" href="/disclaimer">Disclaimer</a></li>
-                        <li class="md:mx-2 md:inline leading-7 text-sm" id="footer-navi-2"><a class="text-white underline text-small" href="/cookie">Cookie policy</a></li>
-                        <li class="md:mx-2 md:inline leading-7 text-sm" id="footer-navi-2"><a class="text-white underline text-small" href="/privacy">Privacy</a></li>
-                    </ul>
-                </div>
+                <p class="bottom mt-4">Copyright @ 2021 Travel Mama all right reserved.</p>
             </div>
-
 
 
         </footer>
