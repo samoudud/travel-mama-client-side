@@ -20,7 +20,7 @@ const Footer = () => {
                             <li>Contact Us</li>
                         </ul>
                     </div>
-                    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 ">
+                    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 pl-8 ">
                         <h3 class="text-3xl text-tomato py-4">About Us</h3>
                         <ul>
                             <li>Our Story</li>
@@ -30,7 +30,7 @@ const Footer = () => {
                             <li>Be Our Partner</li>
                         </ul>
                     </div>
-                    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 ">
+                    <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 pl-8">
                         <h3 class="text-3xl text-tomato py-4">Support</h3>
                         <ul>
                             <li>Customer Support</li>
