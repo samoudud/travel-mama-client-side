@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
-import logo from '../../../images/logo.png'
+import { HashLink } from 'react-router-hash-link';
+import logo from '../../../images/logo.png';
 
 const NavBar = () => {
     const { user, logOut } = useAuth()
@@ -26,6 +27,7 @@ const NavBar = () => {
 
                             <div className="flex items-center space-x-4">
                                 <Link to="/home" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Home</Link>
+                                <Link as={HashLink} to="/home#packages" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Packages</Link>
                                 {
                                     user?.email && <div>
                                         <Link to="/mybooking" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">My Booking</Link>

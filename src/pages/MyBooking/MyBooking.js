@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import useAuth from '../../hooks/useAuth';
 import BookedItem from '../BookedItem/BookedItem';
 import Spinner from '../Shared/Spinner/Spinner';
@@ -44,13 +46,19 @@ const MyBooking = () => {
         <div className={`common-bg ${bookings.length < 10 && 'md:h-screen'}`}>
             <div className='App p-10'>
                 {
-                    bookings.length === 0 ? <h2 className='text-4xl font-bold text-white'>Your Dont't have any booking</h2> : <h2 className='text-4xl font-bold text-white'>Your Bookings</h2>
+                    bookings.length === 0 ? <div>
+                        <h2 className='text-4xl font-bold text-white'>Your Dont't have any booking</h2>
+                        <Link as={HashLink} to='/home#packages'><button className='bg-tomato text-white p-4 mt-10 rounded-lg'>Book Now <i className="fas fa-arrow-right"></i></button></Link>
+                    </div> : <h2 className='text-4xl font-bold text-white'>Your Bookings</h2>
                 }
                 <div className='md:w-1/2 md:mx-auto grid grid-cols-1 md:grid-cols-3'>
                     {
                         bookings.map(booking => <BookedItem key={bookings._id} booking={booking} handleRemove={handleRemove} ></BookedItem>)
                     }
                 </div>
+                {
+                    bookings.length !== 0 && <Link as={HashLink} to='/home#packages'><button className='bg-tomato text-white p-4 mt-10 rounded-lg'>Book More <i className="fas fa-arrow-right"></i></button></Link>
+                }
             </div>
         </div >
     );

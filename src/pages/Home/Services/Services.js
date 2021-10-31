@@ -17,7 +17,7 @@ const Services = () => {
         return <Spinner></Spinner>
     }
     return (
-        <div className='my-20'>
+        <div id='packages' className='my-20'>
             <div className='App'>
                 <p className='text-tomato'>Our Packages</p>
                 <h2 className='text-4xl font-medium  App sm:w-full md:w-1/2  mx-auto'>Tour We Provide In The <br />World</h2>
