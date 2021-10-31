@@ -8,7 +8,7 @@ const Footer = () => {
                 <div class="flex flex-wrap mb-4 w-full">
                     <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 py-4 pl-8">
                         <img className='md:w-3/4 ' src={logo} alt="" />
-                        <p className=' mx-auto pt-4'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et fugit sapiente cupiditate incidunt reprehenderit</p>
+                        <p className=' mx-auto pt-4'>Travel Mama is one of few travel companies in Bangladesh working on the field of sustainable tourism.</p>
                     </div>
                     <div class="w-full sm:w-1/2 md:w-1/2 lg:w-1/4 pl-8">
                         <h3 class="text-3xl text-tomato py-4">Quick Links</h3>
