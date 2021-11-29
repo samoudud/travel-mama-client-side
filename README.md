@@ -3,7 +3,7 @@
 This project was Created with [Create React App](https://travel-mama-client.web.app/).
 
 ## [Client Side Public repo link]
-Click here for the Public repo: [Client Side code](https://github.com/samoudud/travel-mama-server-side)
+Click here for the Public repo: [Client Side code](https://github.com/samoudud/travel-mama-client-side)
 
 
 
